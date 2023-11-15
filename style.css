@@ -44,9 +44,73 @@ a{text-decoration: none;}
     justify-content: space-between;
 }
 .menu_area ul li{
+    position: relative;
 
+}
+.menu_area ul li::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #00ffff;
+    bottom: -10px;
+    left: 0;
+    transition: .5s all ease-in-out;
+
+}
+.menu_area ul li:hover:after{
+    width: 100%;
 }
 .menu_area ul li a{
     colour: #fff
-    font
+    font-family: lato
+    font-size: 16px;
+    transition: 0.3s all ease-in-out; 
+}
+.menu_area ul li a:hover{
+    colour: #00ffff;
+}
+.info{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info h1{
+    colour:#fff;
+    font-family: lato;
+    font-size: 60px;
+}
+.info p{
+    colour:#fff;
+    font-size: 20px;
+    font-family: Arial;
+    margin: 30px 0px; 
+}
+.btn button{
+    padding: 15px 45px;
+    background: transparent;
+    border: 2px solid aqua;
+    colour:#fff;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn button::after{
+content: '';
+position: absolute;
+width: 0%;
+height: 100%;
+background: rgb(73, 129, 59);
+left: 0;
+top: 0;
+z-index: -1;
+transition: .5s all ease-in-out;
+}
+.btn button:hover:after{
+    width: 100%;
 }
